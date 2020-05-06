@@ -1,10 +1,12 @@
-import { combineReducers } from "redux";
-import testReducer from "../../features/testarea/testReducer";
-import eventReducer from "./eventReducer";
+import { combineReducers } from 'redux';
+import { reducer as FormReducer } from 'redux-form';
+import testReducer from '../../features/testarea/testReducer';
+import eventReducer from './eventReducer';
 
 const rootReducer = combineReducers({
+  form: FormReducer,
   test: testReducer,
-  events: eventReducer
+  events: eventReducer,
 });
 
 export default rootReducer;
